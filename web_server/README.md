@@ -9,5 +9,5 @@ You can build the application on local or either use docker to ease the process.
 Place yourself on the terminal, at the same level as this directory, and run:
 ```
 docker build -t <simple project name> .
-docker run <simple project name>
+docker run -p 8080:8080 <simple project name>
 ```
