@@ -17,9 +17,14 @@ docker run <simple project name>
 
 For this mini-project we need [fmt package](https://pkg.go.dev/fmt), which implements formatted I/O functions analogous to C's printf and scanf. The format 'verbs' are derived from C's but are simpler. This way we will handle output for our _Hello World_.
 
-To import this package we simply do the following:
-```
+To import this package we simply do the following [Ref. 1]:
+```go
 import "fmt"
 ```
 
-We also use our _main_ function for printing our text through the [_fmt.Println_ function](https://pkg.go.dev/fmt#Println).
+We also use our _main_ function for printing our text through the [_fmt.Println_ function](https://pkg.go.dev/fmt#Println) [Ref. 2].
+```go
+func main() {
+	fmt.Println("Hello World!")
+}
+```
