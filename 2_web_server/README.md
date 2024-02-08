@@ -14,7 +14,7 @@ docker run -p 8080:8080 <simple project name>
 
 ## Reference Index
 
-For this mini-project we need [net/http package](https://pkg.go.dev/net/http). For this reason, we import it, as well as fmt as explained on the previous module.
+For this mini-project we need [net/http package](https://pkg.go.dev/net/http). For this reason, we import it, as well as fmt as explained on the previous module. [Ref. 1]
 
 The basic structure for this example is explained on the official documentation for [HTTP Server](https://pkg.go.dev/net/http#hdr-Servers). Nonetheless, we modified the example to make it easier to understand _HandlerFunc_. Below is how it's used on the official Golang Documentation:
 ```
@@ -23,14 +23,14 @@ http.HandleFunc("/bar", func(w http.ResponseWriter, r *http.Request) {
 })
 ```
 
-We use a function (simply called 'handler') for simplifying the HandlerFunc method:
+We use a function (simply called 'handler') for simplifying the HandlerFunc method [Ref. 2]:
 ```
 func handler(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "Your Golang-based Web Server is working properly!")
 }
 ```
 
-This way we only use _HandlerFunc_ as follows:
+This way we only use _HandlerFunc_ as follows [Ref. 3]:
 ```
 http.HandleFunc("/", handler)
 ```
