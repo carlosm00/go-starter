@@ -2,7 +2,7 @@ FROM golang:latest
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY main.go .
 
 RUN go build -o web_server main.go
 
