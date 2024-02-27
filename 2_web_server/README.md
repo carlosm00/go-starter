@@ -33,7 +33,7 @@ RawContent        : HTTP/1.1 200 OK
 ```
 
 ## Reference Index
-
+### Ref. 1
 For this mini-project we need [net/http package](https://pkg.go.dev/net/http) for handling HTTP connections, and [log](https://pkg.go.dev/log) for handling logging. For this reason, we import it, as well as fmt as explained on the previous module. [Ref. 1]
 
 The basic structure for this example is explained on the official documentation for [HTTP Server](https://pkg.go.dev/net/http#hdr-Servers). Nonetheless, we modified the example to make it easier to understand _HandlerFunc_. Below is how it's used on the official Golang Documentation:
@@ -42,14 +42,14 @@ http.HandleFunc("/bar", func(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 })
 ```
-
+### Ref. 2 
 We use a function (simply called 'handler') for simplifying the HandlerFunc method [Ref. 2]:
 ```go
 func handler(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "Your Golang-based Web Server is working properly!")
 }
 ```
-
+### Ref. 3
 This way we only use _HandlerFunc_ as follows [Ref. 3]:
 ```go
 http.HandleFunc("/", handler)
