@@ -3,7 +3,7 @@ package main
 // Ref. 1
 import (
     "fmt"
-    "io/ioutil"
+    "io"
     "net/http"
 )
 
@@ -17,7 +17,7 @@ func main() {
     defer resp.Body.Close()
 
     // Ref. 3
-    body, err := ioutil.ReadAll(resp.Body)
+    body, err := io.ReadAll(resp.Body)
     if err != nil {
         fmt.Println("Failed to read response body:", err)
         return
